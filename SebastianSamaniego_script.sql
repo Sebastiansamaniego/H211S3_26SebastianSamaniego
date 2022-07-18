@@ -121,16 +121,16 @@ ALTER TABLE VENTA ADD CONSTRAINT VENTA_EMPLEADO
 INSERT INTO UBIGEO
 (CODUBI,DISUBI,PROUBI,DEPUBI)
 VALUES
-('P00001','San Vicente','Cañete','Lima'),
-('P00002','Imperial','Cañete','Lima'),
-('P00003','Nuevo Imperial','Cañete','Lima'),
-('P00004','San Luis','Cañete','Lima'),
-('P00005','Cerro Azul','Cañete','Lima'),
-('P00006','Pacaran','Cañete','Lima'),
-('P00007','Chilca','Cañete','Lima'),
-('P00008','Santa Cruz de Flores','Cañete','Lima'),
-('P00009','Mala','Cañete','Lima'),
-('P00010','Zuñiga','Cañete','Lima')
+('P00001','San Vicente','CaÃ±ete','Lima'),
+('P00002','Imperial','CaÃ±ete','Lima'),
+('P00003','Nuevo Imperial','CaÃ±ete','Lima'),
+('P00004','San Luis','CaÃ±ete','Lima'),
+('P00005','Cerro Azul','CaÃ±ete','Lima'),
+('P00006','Pacaran','CaÃ±ete','Lima'),
+('P00007','Chilca','CaÃ±ete','Lima'),
+('P00008','Santa Cruz de Flores','CaÃ±ete','Lima'),
+('P00009','Mala','CaÃ±ete','Lima'),
+('P00010','ZuÃ±iga','CaÃ±ete','Lima')
 
 select * from UBIGEO 
 
@@ -164,7 +164,7 @@ INSERT INTO EMPLEADO
 (NOMEMP,APEEMP,DNIEMP,CELEMP,COREMP,ESTEMP,TIPEMP,CODUBI,IDSUC)
 VALUES
 ('Lucas','Amador','15478236', '987456320', 'Lucas@gmail.com','A','A','P00002','2'),
-('Fabrizio','Calderón', '14785203', '974158996', 'Fabrizio@gmail.com','A','V','P00001','1'),
+('Fabrizio','CalderÃ³n', '14785203', '974158996', 'Fabrizio@gmail.com','A','V','P00001','1'),
 ('Anderson','Cortez', '14785223', '902356489', 'AndersonC@gmail.com','A','J','P00003','3'),
 ('Sandra','Sanchez', '74102366', '912365409', 'SandraT@gmail.com','A','D','P00001','1'),
 ('Kyara','Hurtado', '75842103', '987410236', 'KyaraH@gmail.com','A','V','P00002','2'),
@@ -181,20 +181,31 @@ SELECT * FROM EMPLEADO
 INSERT INTO PRODUCTO
 (NOMPRO,PREPRO,STOCPRO,ESTPRO,DESPRO)
 VALUES
-('Pizza Americana','25.00',3,'A','¨Pizza Americana con Queso'),
-('Pizza Hawaiana','45.00',4,'A','Pizza que contiene piña y peperroni'),
-('Pizza Artesanal','30.00',5,'A','¡El paraiso en la mesa! Se completa con jamón, jugosa piña y queso mozzarella'),
-('Pizza Vegetariana','20.00',10,'A','Exquisita combinación de champiñones, aceitunas verdes, pimientos verdes'),
-('Pizza Continental','50.00',0,'I','Deliciosa mixtura de Jamón, champiñones, cebolla roja y queso mozzarella'),
+('Pizza Americana','25.00',3,'A','Â¨Pizza Americana con Queso'),
+('Pizza Hawaiana','45.00',4,'A','Pizza que contiene piÃ±a y peperroni'),
+('Pizza Artesanal','30.00',5,'A','Â¡El paraiso en la mesa! Se completa con jamÃ³n, jugosa piÃ±a y queso mozzarella'),
+('Pizza Vegetariana','20.00',10,'A','Exquisita combinaciÃ³n de champiÃ±ones, aceitunas verdes, pimientos verdes'),
+('Pizza Continental','50.00',0,'I','Deliciosa mixtura de JamÃ³n, champiÃ±ones, cebolla roja y queso mozzarella'),
 ('Pizza Mozzarella','47.00',13,'A','Para los amantes del queso una deliciosa pizza con nuestro queso mozzarella gratinado'),
 ('Pizza Pepperoni','12.00',14,'A','Sabor incomparable de pepperoni americano y queso mozzarella'),
-('Pizza Suprema','36.00',0,'I','combinación de pepperoni americano, carne de res, carne de cerdo,champiñones,pimientos verdes'),
-('Pizza Meat Lovers','40.00',30,'A','¡Un festín de carnes! Pepperoni americano, salchicha italiana, carne de res, carne decerdo'),
-('Pizza Chili Hut','54.00',40,'A','Deliciosa combinación de trozos de pollo, piña, tocino y salsa Chili thai')
+('Pizza Suprema','36.00',0,'I','combinaciÃ³n de pepperoni americano, carne de res, carne de cerdo,champiÃ±ones,pimientos verdes'),
+('Pizza Meat Lovers','40.00',30,'A','Â¡Un festÃ­n de carnes! Pepperoni americano, salchicha italiana, carne de res, carne decerdo'),
+('Pizza Chili Hut','54.00',40,'A','Deliciosa combinaciÃ³n de trozos de pollo, piÃ±a, tocino y salsa Chili thai')
 
 select * from producto
 
--- Insertamos datos en las tablas VENTASELECT * FROM VENTA;SET DATEFORMAT dmy;INSERT INTO VENTA(FECVEN, IDCLI, IDEMP) VALUES('06/04/2021', '1', '1'),('08/10/2020', '2', '2'),('09/09/2021', '3', '3'),('10/03/2021', '5', '4'),('15/04/2022', '6', '5');
+
+SELECT * FROM VENTA;
+SET DATEFORMAT dmy;
+
+INSERT INTO VENTA
+(FECVEN, IDCLI, IDEMP) VALUES
+('06/04/2021', '1', '1'),
+('08/10/2020', '2', '2'),
+('09/09/2021', '3', '3'),
+('10/03/2021', '5', '4'),
+('15/04/2022', '6', '5');
+
 select * from VENTA
 
 /*FILTROS*/
